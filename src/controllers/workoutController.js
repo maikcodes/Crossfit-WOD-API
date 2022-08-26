@@ -19,7 +19,7 @@ const getOneWorkout = (req, res) => {
   if (!workoutId) {
     res.status(400).send({
       status: "FAILED",
-      data: { error: "Parameter 'workoutID' cannot be empty" },
+      data: { error: "Parameter ':workoutId' can not be empty" },
     });
   }
 
@@ -29,7 +29,7 @@ const getOneWorkout = (req, res) => {
   } catch (error) {
     res
       .status(error?.status || 500)
-      .send({ status: "FAILED", data: { error: error?.error || error } });
+      .send({ status: "FAILED", data: { error: error?.message || error } });
   }
 };
 
@@ -79,7 +79,7 @@ const updateOneWorkout = (req, res) => {
   if (!workoutId) {
     res.status(400).send({
       status: "FAILED",
-      data: { error: "Parameter 'workoutId' cannot be empty" },
+      data: { error: "Parameter ':workoutId' can not be empty" },
     });
   }
 
