@@ -1,7 +1,7 @@
 const swaggerJSDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
-// Basic Meta Informations about api API
+// Basic Meta Information about api API
 const options = {
   definition: {
     openapi: "3.0.0",
